@@ -1,0 +1,19 @@
+{
+  "name": "online-shop",
+  "version": "0.1.0",
+  "authors": [
+    "Sasha Saulyak <lux1995@yandex.ru>"
+  ],
+  "description": "My second project at LoftSchool",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "1.12"
+  }
+}
