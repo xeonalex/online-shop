@@ -1,0 +1,26 @@
+.clearfix{
+	&:after {
+		content: ".";
+		display: block;
+		height: 0;
+		clear: both;
+		visibility: hidden;
+		background: linear-gradient(to top, #fefcea, #f1da36);
+	}
+}
+
+.seo-span {
+display: none;
+}
+
+.main-wrap,
+.footer{
+	width: 100%;
+}
+.border-grey {
+	border-bottom: 2px solid $main_border;
+}
+.main-wrap{
+	background: $main_color_1;
+	color:red;
+}

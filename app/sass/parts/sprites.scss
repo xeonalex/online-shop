@@ -1,0 +1,11 @@
+$socials: fc_black, vk_black, tw_black, fc_white, vk_white, tw_white;
+$map: sprite-map('socials/*.png',$spacing: 5px);
+
+@each $item in $socials {
+	.socials-list__link-#{$item} {
+			@include set-sprite($map,$item);
+	}
+	.socials-list__link-#{$item}:hover {
+			@include set-sprite($map,$item#{-hover});
+	}
+}

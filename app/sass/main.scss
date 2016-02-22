@@ -1,0 +1,15 @@
+@import "compass";
+@import 'layout/mixins';
+@import 'layout/variables'; // змінні
+@import 'layout/adjustments'; // глобальні стилі
+@import 'parts/sprites';
+
+
+// ГЛАВНЫЕ БЛОКИ
+
+@import 'parts/header';
+@import 'parts/footer';
+
+body {
+	color:red;
+}

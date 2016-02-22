@@ -1,0 +1,144 @@
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+  background: linear-gradient(to top, #fefcea, #f1da36);
+}
+
+.seo-span {
+  display: none;
+}
+
+.main-wrap,
+.footer {
+  width: 100%;
+}
+
+.border-grey {
+  border-bottom: 2px solid #ebedef;
+}
+
+.main-wrap {
+  background: #f4f4f4;
+  color: red;
+}
+
+.socials-list__link-fc_black {
+  background: url('../img/socials-sdb3e4d7bf9.png') 0 -31px no-repeat;
+  width: 26px;
+  height: 26px;
+}
+
+.socials-list__link-fc_black:hover {
+  background: url('../img/socials-sdb3e4d7bf9.png') 0 0 no-repeat;
+  width: 26px;
+  height: 26px;
+}
+
+.socials-list__link-vk_black {
+  background: url('../img/socials-sdb3e4d7bf9.png') 0 -347px no-repeat;
+  width: 27px;
+  height: 26px;
+}
+
+.socials-list__link-vk_black:hover {
+  background: url('../img/socials-sdb3e4d7bf9.png') 0 -316px no-repeat;
+  width: 27px;
+  height: 26px;
+}
+
+.socials-list__link-tw_black {
+  background: url('../img/socials-sdb3e4d7bf9.png') 0 -189px no-repeat;
+  width: 26px;
+  height: 26px;
+}
+
+.socials-list__link-tw_black:hover {
+  background: url('../img/socials-sdb3e4d7bf9.png') 0 -158px no-repeat;
+  width: 26px;
+  height: 26px;
+}
+
+.socials-list__link-fc_white {
+  background: url('../img/socials-sdb3e4d7bf9.png') 0 -110px no-repeat;
+  width: 43px;
+  height: 43px;
+}
+
+.socials-list__link-fc_white:hover {
+  background: url('../img/socials-sdb3e4d7bf9.png') 0 -62px no-repeat;
+  width: 43px;
+  height: 43px;
+}
+
+.socials-list__link-vk_white {
+  background: url('../img/socials-sdb3e4d7bf9.png') 0 -426px no-repeat;
+  width: 43px;
+  height: 43px;
+}
+
+.socials-list__link-vk_white:hover {
+  background: url('../img/socials-sdb3e4d7bf9.png') 0 -378px no-repeat;
+  width: 43px;
+  height: 43px;
+}
+
+.socials-list__link-tw_white {
+  background: url('../img/socials-sdb3e4d7bf9.png') 0 -268px no-repeat;
+  width: 43px;
+  height: 43px;
+}
+
+.socials-list__link-tw_white:hover {
+  background: url('../img/socials-sdb3e4d7bf9.png') 0 -220px no-repeat;
+  width: 43px;
+  height: 43px;
+}
+
+.header__firstline-wrap,
+.header__menu-line-wrap,
+.header__menu-line-wrap {
+  width: 1100px;
+  margin: 0 auto;
+}
+
+.header__firstline,
+.header__menu-line {
+  background: white;
+}
+
+.firstline-left {
+  float: left;
+  min-width: 200px;
+}
+
+.firstline-right {
+  float: right;
+  margin-left: -80px;
+  min-width: 450px;
+}
+
+.socials-list {
+  list-style: none;
+  word-spacing: -.36em;
+}
+
+.socials-list__li, .firstline-right__adress,
+.firstline-right__telephone {
+  display: inline-block;
+}
+
+.firstline-right__adress,
+.firstline-right__telephone {
+  margin-left: 80px;
+}
+
+.footer {
+  background-image: url("../img/parts/footer-bg.jpg");
+}
+
+body {
+  color: red;
+}

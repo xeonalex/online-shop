@@ -1,0 +1,22 @@
+footer.footer
+	.footer__wrap
+		.footer__left-side
+			.logo-grey
+				img.logo-grey__logo-img
+		.footer__right-side
+			ul.footer__socials-list.socials-list
+				-for (var i = 0; i < socials_pref.length; i++)
+					li.socials-list__li.socials-list__li_bigger
+						a.socials-list__link(href='#' class="socials-list__link-#{socials_pref[i]}_white" alt="#{socials_text[i]}")
+							span.seo-span #{socials_text[i]}
+
+			ul.footer__simple-main-menu.simple-main-menu
+				each text in main_menu
+					li.simple-main-menu__li
+						a.simple-main-menu__link(href='#' alt='#{text}') #{text}
+	.footer__policy
+		p.footer__policy-text Все права защищены. 2016. Копировать контент запрещено
+
+
+
+

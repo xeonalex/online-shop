@@ -1,0 +1,33 @@
+.header__firstline-wrap,
+.header__menu-line-wrap,
+.header__menu-line-wrap {
+	width: $main_width;
+	margin: 0 auto;
+}
+.header__firstline,
+.header__menu-line {
+	background: $main_color_2;
+}
+.firstline-left{
+float: left;
+min-width: 200px;
+}
+.firstline-right{
+float: right;
+margin-left: -80px;
+min-width: 450px;
+}
+
+.socials-list{
+list-style: none;
+word-spacing: -.36em;
+}
+.socials-list__li {
+display:inline-block;
+}
+
+.firstline-right__adress,
+.firstline-right__telephone {
+	@extend .socials-list__li;
+	margin-left: 80px;
+}

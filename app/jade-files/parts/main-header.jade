@@ -1,0 +1,33 @@
+-var user_menu = ['Карта проезда',"История заказов","Корзина"];
+-var main_menu = ['Планшеты','Мобильные телефоны','Мр3 плееры','Персональные компьютеры','Ноутбуки','Аксессуары','Бытовая техника'];
+-var socials_pref=['fc','vk','tw'];
+-var socials_text=["Facebook","Vkontakte","Twitter"];
+header.header
+	.header__first-line
+		.header__first-line-wrap.clearfix
+			ul.header__socials-list.socials-list
+				-for (var i = 0; i < socials_pref.length; i++)
+					li.socials-list__li.socials-list__li_smaller
+						a.socials-list__link(href='#' class="socials-list__link-#{socials_pref[i]}_black" alt="#{socials_text[i]}")
+							span.socials-list__seo-span #{socials_text[i]}
+			.header__adress
+				p.adress_street ул. Маяковского 7, офис 17
+			.header__telephone
+				p.telephone__number +7 (921) 123-12-21
+	.header__logoline
+		.header__menu-line-wrap.clearfix
+			.header__logo.logo
+				h1.logo__text_orange COOLTECH
+			form.header__search-form.search-form
+				input.search-form__input(type='text' placeholder='Что будем искать?')
+				button.search-form__submit Найти
+			ul.header__user-menu.user-menu
+				each text, index in user_menu
+					li.user-menu__li
+						a.user-menu__link(href='#' class="#{index==0 ? 'link_active':''}" alt="#{text}") #{text}
+	.header__menu-line
+		.header__menu-line-wrap.clearfix
+			menu.header__main-menu.main-menu
+				each text, index in main_menu
+					li.main-menu__li
+						a.main-menu__link(href='#' class="#{index == 1 ? 'link-main_active' : ''}" alt="#{text}") #{text}
