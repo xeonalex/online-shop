@@ -1,12 +1,15 @@
 .clearfix{
 	&:after {
-		content: ".";
+		content: "";
 		display: block;
 		height: 0;
 		clear: both;
-		visibility: hidden;
-		background: linear-gradient(to top, #fefcea, #f1da36);
 	}
+}
+
+html {
+	font-family: 'open_sansregular';
+	min-width: 1256px;
 }
 
 .seo-span {
@@ -17,10 +20,12 @@ display: none;
 .footer{
 	width: 100%;
 }
-.border-grey {
-	border-bottom: 2px solid $main_border;
-}
+
 .main-wrap{
 	background: $main_color_1;
-	color:red;
+}
+
+.main-wrap__content {
+	width: $main_width;
+	margin: 0 auto;
 }

@@ -4,7 +4,8 @@ var gulp=require("gulp"),
     plumber = require('gulp-plumber'), // замінює обробник onerror на подію error (тобто не вибиває процес) потрібно добавляти
     sass = require('gulp-sass'),
     autoprefixer = require('gulp-autoprefixer'),
-    compass = require('gulp-compass');
+    compass = require('gulp-compass'),
+    wiredep = require('wiredep').stream;
 
 var paths = {
 	'jade_watch':['./app/jade-files/*/*.jade', './app/jade-files/*.jade'],
@@ -12,7 +13,8 @@ var paths = {
     'sass_watch':['./app/sass/*/*.scss', './app/sass/*.scss'],
     'sass':'./app/sass/main.scss',
     'htmlDest': './app/ProjectPath/',
-    'cssDest': './app/css/'
+    'cssDest': './app/css/',
+    'html': './app/ProjectPath/*.html'
 
 }
 
@@ -47,9 +49,6 @@ gulp.task('gulpCompiling', function() {
     .pipe(gulp.dest(paths.htmlDest))
 });
 
-gulp.task('gulp:watch', function(){
-	gulp.watch(paths.jade_watch,['gulpCompiling'])
-});
 
 // gulp.task('sassCompiling', function () {
 //   return gulp.src(paths.sass,{sourcemap: true, style: 'compact'})
@@ -61,6 +60,18 @@ gulp.task('gulp:watch', function(){
 //         }));
 // });
 
+gulp.task('bower:links', function () {
+  gulp.src(paths.html)
+    .pipe(wiredep({
+      directory: "./app/bower"
+    }))
+    .pipe(gulp.dest(paths.htmlDest));
+});
+
+gulp.task('gulp:watch', function(){
+	gulp.watch(paths.jade_watch,['gulpCompiling'])
+  gulp.watch(paths.html,['bower:links'])
+});
 gulp.task('sass:watch', function () {
   //gulp.watch(paths.sass_watch, ['sassCompiling']);
   gulp.watch(paths.sass_watch, ['compass']);

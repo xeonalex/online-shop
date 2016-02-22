@@ -1,0 +1,8 @@
+-var bread= ["Главная","Каталог"];
+.flow-out
+	ul.flow-out__list.bread-crumbs
+		each text,index in bread
+			li.bread-crumbs__li
+				a.bread-crumbs__link(href='#' class="#{index == 1 ? 'bread-crumbs__link_active':''}" alt='#{text}') #{text}
+	h3.flow-out__current-page-h3
+		a.flow-out__current-page(href="#" alt="Текущая") Мобильные телефоны

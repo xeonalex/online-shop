@@ -5,4 +5,14 @@ html
 		.main-wrap
 			include parts/main-header
 
+			.main-wrap__content.clearfix
+				include parts/flow-out
+				include parts/main-aside
+				include parts/main-content
+				include parts/main-site-info
+
 		include parts/main-footer
+		//bower:js
+		//endbower
+		script(src='../js/jquery-columnizer.min.js')
+		script(src='../js/main.js')
