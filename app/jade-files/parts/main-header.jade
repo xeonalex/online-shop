@@ -4,7 +4,7 @@
 -var socials_text=["Facebook","Vkontakte","Twitter"];
 header.header
 	.header__first-line
-		.header__first-line-wrap.clearfix
+		.header__first-line-wrap
 			ul.header__socials-list.socials-list
 				-for (var i = 0; i < socials_pref.length; i++)
 					li.socials-list__li.socials-list__li_smaller
@@ -15,7 +15,7 @@ header.header
 			.header__adress
 				p.adress__street ул. Маяковского 7, офис 17
 	.header__logoline
-		.header__logo-line-wrap.clearfix
+		.header__logo-line-wrap
 			.header__logo.logo
 				a.logo__link(href='#')
 					h1.logo__text_orange COOLTECH
@@ -28,7 +28,7 @@ header.header
 						li.user-menu__li
 							a.user-menu__link(href='#' class="#{index==0 ? 'user-menu__link_active':''}" alt="#{text}") #{text}
 	.header__menu-line
-		.header__menu-line-wrap.clearfix
+		.header__menu-line-wrap
 			menu.header__main-menu.main-menu
 				each text, index in main_menu
 					li.main-menu__li

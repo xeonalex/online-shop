@@ -1,0 +1,95 @@
+.socials-list__link-checkbox {
+  background: url('../img/sprite-s7e184e221b.png') 0 0 no-repeat;
+  width: 19px;
+  height: 19px;
+}
+
+.socials-list__link-checkbox_checked {
+  background: url('../img/sprite-s7e184e221b.png') 0 -24px no-repeat;
+  width: 19px;
+  height: 19px;
+}
+
+.socials-list__link-checkbox_hover {
+  background: url('../img/sprite-s7e184e221b.png') 0 -48px no-repeat;
+  width: 19px;
+  height: 19px;
+}
+
+.socials-list__link-radio {
+  background: url('../img/sprite-s7e184e221b.png') 0 -93px no-repeat;
+  width: 19px;
+  height: 19px;
+}
+
+.socials-list__link-radio_checked {
+  background: url('../img/sprite-s7e184e221b.png') 0 -117px no-repeat;
+  width: 19px;
+  height: 19px;
+}
+
+.socials-list__link-radio_hover {
+  background: url('../img/sprite-s7e184e221b.png') 0 -141px no-repeat;
+  width: 19px;
+  height: 19px;
+}
+
+.socials-list__link-location {
+  background: url('../img/sprite-s7e184e221b.png') 0 -72px no-repeat;
+  width: 12px;
+  height: 16px;
+}
+
+.socials-list__link-telephone {
+  background: url('../img/sprite-s7e184e221b.png') 0 -205px no-repeat;
+  width: 12px;
+  height: 16px;
+}
+
+.socials-list__link-view-list {
+  background: url('../img/sprite-s7e184e221b.png') 0 -277px no-repeat;
+  width: 16px;
+  height: 16px;
+}
+
+.socials-list__link-view-table {
+  background: url('../img/sprite-s7e184e221b.png') 0 -298px no-repeat;
+  width: 16px;
+  height: 16px;
+}
+
+.socials-list__link-view-tile {
+  background: url('../img/sprite-s7e184e221b.png') 0 -319px no-repeat;
+  width: 16px;
+  height: 16px;
+}
+
+.socials-list__link-toddler {
+  background: url('../img/sprite-s7e184e221b.png') 0 -226px no-repeat;
+  width: 8px;
+  height: 14px;
+}
+
+.socials-list__link-rate-icon {
+  background: url('../img/sprite-s7e184e221b.png') 0 -165px no-repeat;
+  width: 16px;
+  height: 15px;
+}
+
+.socials-list__link-rate-icon_active {
+  background: url('../img/sprite-s7e184e221b.png') 0 -185px no-repeat;
+  width: 16px;
+  height: 15px;
+}
+
+.socials-list__link-toggle_down {
+  background: url('../img/sprite-s7e184e221b.png') 0 -245px no-repeat;
+  width: 18px;
+  height: 11px;
+}
+
+.socials-list__link-toggle_up {
+  background: url('../img/sprite-s7e184e221b.png') 0 -261px no-repeat;
+  width: 18px;
+  height: 11px;
+}

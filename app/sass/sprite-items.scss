@@ -1,0 +1,15 @@
+@import 'layout/mixins';
+
+$sprite: checkbox, checkbox_checked, checkbox_hover, radio, radio_checked, radio_hover, location, telephone, view-list, view-table, view-tile, toddler,rate-icon,rate-icon_active,toggle_down,toggle_up
+;
+$map: sprite-map('sprite/*.png',$spacing: 5px);
+
+@each $item in $sprite {
+	.socials-list__link-#{$item} {
+			@include set-sprite($map,$item);
+	}
+}
+
+
+
+

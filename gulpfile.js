@@ -14,8 +14,8 @@ var paths = {
     'sass':'./app/sass/main.scss',
     'htmlDest': './app/ProjectPath/',
     'cssDest': './app/css/',
-    'html': './app/ProjectPath/*.html'
-
+    'html': './app/ProjectPath/*.html',
+    'sprites': './app/sass/sprite-items.scss'
 }
 
 gulp.task('compass', function() {

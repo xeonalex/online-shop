@@ -1,6 +1,7 @@
 .header__first-line-wrap,
 .header__menu-line-wrap,
 .header__logo-line-wrap {
+	@include clearfix;
 	width: $main_width;
 	margin: 0 auto;
 }
@@ -54,6 +55,27 @@ float: right;
 	font-size: 0,875em;
 	margin: 0;
 }
+
+.adress__street:before {
+	content: '';
+	display: inline-block;
+	vertical-align: middle;
+  background: url('../img/sprite-s7e184e221b.png') 0 -72px no-repeat;
+  margin-right: 10px;
+  width: 12px;
+  height: 16px;
+
+}
+.telephone__number:before {
+	content: '';
+	display: inline-block;
+	vertical-align: middle;
+  background: url('../img/sprite-s7e184e221b.png') 0 -205px no-repeat;
+  margin-right: 10px;
+  width: 12px;
+  height: 16px;
+}
+
 .header__logo-line-wrap {
 	height: 94px;
 }
@@ -79,6 +101,9 @@ float: right;
 	float: left;
 }
 .header__user-menu {
+	position: relative;
+    top: 5px;
+	margin-top: 5px;
 	float: right;
 	margin: 0;
 }

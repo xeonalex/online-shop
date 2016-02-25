@@ -10,13 +10,14 @@
 		<!--endbower-->
 		<link rel="stylesheet" type="text/css" href="../css/fonts.css">
 		<link rel="stylesheet" type="text/css" href="../css/normalize.css">
+		<link rel="stylesheet" type="text/css" href="../css/jquery-ui-slider.css">
 		<link rel="stylesheet" type="text/css" href="../css/main.css">
 	</head>
 	<body>
 		<div class="main-wrap">
 			<header class="header">
 				<div class="header__first-line">
-					<div class="header__first-line-wrap clearfix">
+					<div class="header__first-line-wrap">
 						<ul class="header__socials-list socials-list">
 							<li class="socials-list__li socials-list__li_smaller"><a href="#" alt="Facebook" class="socials-list__link socials-list__link-fc_black"><span class="socials-list__seo-span">Facebook</span></a></li>
 							<li class="socials-list__li socials-list__li_smaller"><a href="#" alt="Vkontakte" class="socials-list__link socials-list__link-vk_black"><span class="socials-list__seo-span">Vkontakte</span></a></li>
@@ -31,7 +32,7 @@
 					</div>
 				</div>
 				<div class="header__logoline">
-					<div class="header__logo-line-wrap clearfix">
+					<div class="header__logo-line-wrap">
 						<div class="header__logo logo"><a href="#" class="logo__link">
 								<h1 class="logo__text_orange">COOLTECH</h1></a></div>
 						<div class="header__search-menu-wrap">
@@ -48,7 +49,7 @@
 					</div>
 				</div>
 				<div class="header__menu-line">
-					<div class="header__menu-line-wrap clearfix">
+					<div class="header__menu-line-wrap">
 						<menu class="header__main-menu main-menu">
 							<li class="main-menu__li"><a href="#" alt="Планшеты" class="main-menu__link">Планшеты</a></li>
 							<li class="main-menu__li"><a href="#" alt="Мобильные телефоны" class="main-menu__link main-menu__link_active">Мобильные телефоны</a></li>
@@ -61,7 +62,7 @@
 					</div>
 				</div>
 			</header>
-			<div class="main-wrap__content clearfix">
+			<div class="main-wrap__content">
 				<div class="flow-out">
 					<ul class="flow-out__list bread-crumbs">
 						<li class="bread-crumbs__li"><a href="#" alt="Главная" class="bread-crumbs__link">Главная</a></li>
@@ -69,7 +70,75 @@
 					</ul>
 					<h3 class="flow-out__current-page-h3"><a href="#" alt="Текущая" class="flow-out__current-page">Мобильные телефоны</a></h3>
 				</div>
-				<div class="site-info clearfix">
+				<aside class="aside">
+					<ul class="aside__menu category-menu">
+						<li class="category-menu__li"><a href="#" alt="Флагманы" class="category-menu__link">Флагманы</a></li>
+						<li class="category-menu__li"><a href="#" alt="Средний класс" class="category-menu__link">Средний класс</a></li>
+						<li class="category-menu__li"><a href="#" alt="Бюджетная линейка" class="category-menu__link category-menu__link_active">Бюджетная линейка</a></li>
+					</ul>
+					<ul class="aside__goods-param accordeon">
+						<li class="accordeon__li">
+							<p class="accordeon__toggle accordeon_active">Наличие в магазинах</p>
+							<div class="accordeon__content filter-availability">
+								<input type="radio" name="place" id="all_shops" class="filter-availability__input">
+								<label for="all_shops" class="filter-availability__label">Во всех магазинах</label>
+								<input type="radio" name="place" id="near_shop" class="filter-availability__input">
+								<label for="near_shop" class="filter-availability__label">В ближайшем ко мне магазине</label>
+							</div>
+						</li>
+						<li class="accordeon__li">
+							<p class="accordeon__toggle accordeon_active">Бренды</p>
+							<div class="accordeon__content filter-brands">
+								<input type="checkbox" id="brand0" class="filter-brands__input">
+								<label for="brand0" class="filter-brands__label">Lenovo</label>
+								<input type="checkbox" id="brand1" class="filter-brands__input">
+								<label for="brand1" class="filter-brands__label">Apple</label>
+								<input type="checkbox" id="brand2" class="filter-brands__input">
+								<label for="brand2" class="filter-brands__label">Samsung</label>
+								<input type="checkbox" id="brand3" class="filter-brands__input">
+								<label for="brand3" class="filter-brands__label">Asus</label>
+								<input type="checkbox" id="brand4" class="filter-brands__input">
+								<label for="brand4" class="filter-brands__label">Motorola</label><a href="#" class="filter-reset-link">Сбросить фильтр</a>
+							</div>
+						</li>
+						<li class="accordeon__li">
+							<p class="accordeon__toggle accordeon_active">Цена</p>
+							<div class="accordeon__content filter-price">
+								<label class="filter-price__label">от
+									<input type="text" id="minCost" value="0" class="filter-price__input">
+								</label>
+								<label class="filter-price__label">до
+									<input type="text" id="maxCost" value="1000" class="filter-price__input">
+								</label>
+								<div id="slider"></div>
+							</div>
+						</li>
+						<li class="accordeon__li">
+							<p class="accordeon__toggle accordeon_active">Цвет</p>
+							<div class="accordeon__content filter-colors"><a href="#" style="background: #ffffff" class="filter-colors__block"></a><a href="#" style="background: #cccccc" class="filter-colors__block"></a><a href="#" style="background: #000000" class="filter-colors__block"></a><a href="#" style="background: #0a3153" class="filter-colors__block"></a><a href="#" style="background: #ff1800" class="filter-colors__block"></a><a href="#" style="background: #fff343" class="filter-colors__block"></a><a href="#" style="background: #fb914a" class="filter-colors__block"></a><a href="#" style="background: #92c37c" class="filter-colors__block"></a><a href="#" style="background: #40a6ff" class="filter-colors__block"></a><a href="#" style="background: #92c37c" class="filter-colors__block"></a><a href="#" style="background: #40a6ff" class="filter-colors__block"></a><a href="#" style="background: #cccccc" class="filter-colors__block"></a>
+							</div>
+						</li>
+						<li class="accordeon__li">
+							<p class="accordeon__toggle accordeon_active">Операционные системы</p>
+							<div class="accordeon__content filter-os">
+								<input type="checkbox" id="operationSys0" class="filter-os__input">
+								<label for="operationSys0" class="filter-os__label">Android</label>
+								<input type="checkbox" id="operationSys1" class="filter-os__input">
+								<label for="operationSys1" class="filter-os__label">iOS</label>
+								<input type="checkbox" id="operationSys2" class="filter-os__input">
+								<label for="operationSys2" class="filter-os__label">Windows Mobile</label>
+								<input type="checkbox" id="operationSys3" class="filter-os__input">
+								<label for="operationSys3" class="filter-os__label">Symbian</label>
+								<input type="checkbox" id="operationSys4" class="filter-os__input">
+								<label for="operationSys4" class="filter-os__label">Custom</label><a href="#" class="filter-reset-link">Сбросить фильтр</a>
+							</div>
+						</li>
+					</ul>
+				</aside>
+				<main class="content">
+					<div class="content__switchers">sdfsdfs</div>
+				</main>
+				<div class="site-info">
 					<div class="site-info__header">Важная информация</div>
 					<div class="site-info__text">
 						<p class="dontsplit">Повседневная практика показывает, что сложившаяся структура организации влечет за собой процесс внедрения и модернизации позиций, занимаемых участниками в отношении поставленных задач. Значимость этих проблем настолько очевидна, что реализация намеченных плановых заданий в значительной степени обуславливает создание модели развития. Таким образом консультация с широким активом представляет собой интересный эксперимент проверки модели развития.</p>
@@ -111,6 +180,7 @@
 		<script src="../bower/jquery/dist/jquery.js"></script>
 		<!--endbower-->
 		<script src="../js/jquery-columnizer.min.js"></script>
+		<script src="../js/jquery-ui.min.js"></script>
 		<script src="../js/main.js"></script>
 	</body>
 </html>

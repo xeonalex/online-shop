@@ -1,0 +1,43 @@
+- var menu = ["Флагманы","Средний класс" ,"Бюджетная линейка"];
+- var accordeon = ['Наличие в магазинах',"Бренды","Цена","Цвет","Операционные системы"];
+aside.aside
+	ul.aside__menu.category-menu
+		each text,index in menu
+			li.category-menu__li
+				a.category-menu__link(href='#' alt="#{text}" class="#{index==2? 'category-menu__link_active':''}") #{text}
+	ul.aside__goods-param.accordeon
+		each text,index in accordeon
+			li.accordeon__li
+				p.accordeon__toggle(class="accordeon_active") #{text}
+
+				case index
+					when 0: .accordeon__content.filter-availability
+							input.filter-availability__input(type='radio' name='place' id='all_shops')
+							label.filter-availability__label(for='all_shops') Во всех магазинах
+							input.filter-availability__input(type='radio' name='place' id='near_shop')
+							label.filter-availability__label(for='near_shop') В ближайшем ко мне магазине
+					when 1: .accordeon__content.filter-brands
+							- var brands = ["Lenovo","Apple","Samsung","Asus","Motorola"]
+								each text,index in brands
+									input.filter-brands__input(type='checkbox' id='brand#{index}')
+									label.filter-brands__label(for='brand#{index}') #{text}
+								a(href='#' class='filter-reset-link') Сбросить фильтр
+					when 2: .accordeon__content.filter-price
+							label.filter-price__label от
+								input(type='text' class='filter-price__input' id="minCost" value="0")
+							label.filter-price__label до
+								input(type='text' class='filter-price__input' id="maxCost" value="1000")
+							#slider
+
+
+					when 3: .accordeon__content.filter-colors
+							- var colors= ['#ffffff','#cccccc','#000000','#0a3153','#ff1800','#fff343','#fb914a','#92c37c','#40a6ff','#92c37c','#40a6ff','#cccccc'];
+							each text in colors
+								a(href='#' class='filter-colors__block' style="background: #{text}")
+					when 4: .accordeon__content.filter-os
+								- var operationSys = ["Android","iOS","Windows Mobile","Symbian","Custom"]
+								each text,index in operationSys
+									input.filter-os__input(type='checkbox' id='operationSys#{index}')
+									label.filter-os__label(for='operationSys#{index}') #{text}
+								a(href='#' class='filter-reset-link') Сбросить фильтр
+					default: p Lorem ipsum dolor sit amet.

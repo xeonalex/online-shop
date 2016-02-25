@@ -1,26 +1,30 @@
 // Site-info
-.site-info__header {
-	font-family: 'open_sansbold';
-	font-size:1.25em;
-}
-.site-info__text {
-	font-size: 0.875em;
-	.column {
-		width: 540px !important;
-		text-align: justify;
-	}
+.site-info {
+	@include clearfix;
 
-	.last {
-		float:right !important;
+	&__header {
+		font-family: 'open_sansbold';
+		font-size:1.25em;
+	}
+	&__text {
+		font-size: 0.875em;
+		.column {
+			width: 540px !important;
+			text-align: justify;
+		}
+
+		.last {
+			float:right !important;
+		}
 	}
 }
-
 
 /// ФУТЕР
 .footer {
 	background-image: url('../img/parts/footer-bg.jpg');
 }
 .footer__wrap {
+	@include clearfix;
 	width: $main_width;
 	margin: 0 auto;
 	padding: 27px 0;

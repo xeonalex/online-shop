@@ -1,0 +1,306 @@
+$category-menu-link: #fbfbfb;
+$category-menu-link-active: #d9e5ea;
+
+.aside {
+	float: left;
+	width: 333px;
+}
+.category-menu {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	@include border-radius(5px, 5px);
+	color: black;
+	&__li{
+		border: 1px solid #dee1e4;
+		border-top: 0;
+		overflow: hidden;
+		&:last-of-type {
+			@include border-bottom-radius(5px);
+		}
+		&:first-of-type {
+			border-top: 1px solid #dee1e4;
+			@include border-top-radius(5px);
+		}
+	}
+	&__link {
+		font-size: 0.875em;
+		color: #7f7f7f;
+		text-decoration: none;
+		display: block;
+		background:$category-menu-link;
+		padding: 15px 28px;
+		&:hover {
+			background: $category-menu-link-active;
+		}
+		&_active {
+			background: $category-menu-link-active;
+		}
+	}
+}
+
+
+/*** ACCORDEON **/
+.aside__goods-param{
+	margin-top: 38px !important;
+}
+.accordeon {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	&__li{
+		background:$category-menu-link;
+		padding: 0 30px;
+		border: 1px solid #dee1e4;
+		border-top: 0;
+		overflow: hidden;
+		&:last-of-type {
+			@include border-bottom-radius(5px);
+		}
+		&:first-of-type {
+			border-top: 1px solid #dee1e4;
+			@include border-top-radius(5px);
+		}
+	}
+	.accordeon__toggle {
+		font-family: 'open_sanssemibold';
+		font-size: 1em;
+		position: relative;
+		margin: 0;
+		padding: 16px 0;
+		&:hover:after {
+			content: '';
+			display: inline-block;
+			position: absolute;
+			right: -5px;
+			vertical-align: middle;
+			background: url('../img/sprite-s7e184e221b.png') 0 -245px no-repeat;
+  			width: 18px;
+  			height: 11px;
+		}
+		+ .accordeon__content {
+			display: none;
+			font-size: 0.875em;
+		}
+
+	}
+	.accordeon_active {
+		&:hover:after {
+			content: '';
+			display: inline-block;
+			position: absolute;
+			right: -5px;
+			vertical-align: middle;
+			background: url('../img/sprite-s7e184e221b.png') 0 -261px no-repeat;
+		  	width: 18px;
+		  	height: 11px;
+		}
+		+ .accordeon__content {
+			display: block;
+		}
+	}
+	.accordeon__content {
+		margin-bottom: 16px;
+	}
+}
+
+/*** Блоки **/
+.filter-availability {
+	.filter-availability__input {
+		display:none;
+		&:checked + .filter-availability__label:before {
+			display: inline-block;
+			content: '';
+			background: url('../img/sprite-s7e184e221b.png') 0 -117px no-repeat;
+		  width: 19px;
+		  height: 19px;
+		}
+	}
+	.filter-availability__label {
+		margin-top: 7px;
+		display: block;
+		&:first-of-type {
+			margin-top: -7px;
+		}
+		&:before {
+			display: inline-block;
+			vertical-align: middle;
+			content: '';
+			margin-right: 10px;
+			  background: url('../img/sprite-s7e184e221b.png') 0 -93px no-repeat;
+			  width: 19px;
+			  height: 19px;
+		}
+		&:hover:before {
+			display: inline-block;
+			content: '';
+			  background: url('../img/sprite-s7e184e221b.png') 0 -141px no-repeat;
+			  width: 19px;
+			  height: 19px;
+		}
+	}
+}
+
+.filter-brands {
+	.filter-brands__input {
+		display:none;
+		&:checked + .filter-brands__label:before {
+			display: inline-block;
+			content: '';
+			  background: url('../img/sprite-s7e184e221b.png') 0 -24px no-repeat;
+			  width: 19px;
+			  height: 19px;
+		}
+	}
+	.filter-brands__label {
+		margin-top: 7px;
+		display: block;
+		&:first-of-type {
+			margin-top: -7px;
+		}
+		&:before {
+			display: inline-block;
+			vertical-align: middle;
+			content: '';
+			margin-right: 10px;
+		  background: url('../img/sprite-s7e184e221b.png') 0 0 no-repeat;
+		  width: 19px;
+		  height: 19px;
+		}
+		&:hover:before {
+			display: inline-block;
+			content: '';
+			 background: url('../img/sprite-s7e184e221b.png') 0 -48px no-repeat;
+		  width: 19px;
+		  height: 19px;
+		}
+	}
+}
+
+
+.filter-os {
+	.filter-os__input {
+		display:none;
+		&:checked + .filter-os__label:before {
+			display: inline-block;
+			content: '';
+			  background: url('../img/sprite-s7e184e221b.png') 0 -24px no-repeat;
+			  width: 19px;
+			  height: 19px;
+		}
+	}
+	.filter-os__label {
+		margin-top: 7px;
+		display: block;
+		&:before {
+			display: inline-block;
+			vertical-align: middle;
+			content: '';
+			margin-right: 10px;
+			  background: url('../img/sprite-s7e184e221b.png') 0 0 no-repeat;
+			  width: 19px;
+			  height: 19px;
+
+		}
+		&:hover:before {
+			display: inline-block;
+			content: '';
+			  background: url('../img/sprite-s7e184e221b.png') 0 -48px no-repeat;
+			  width: 19px;
+			  height: 19px;
+		}
+	}
+}
+
+
+.filter-colors{
+	text-align: justify;
+	&__input {
+		display: inline-block;
+		width: 37px;
+		height: 37px;
+		border: 1px solid #dee1e4;
+		&_red {
+			background: red;
+		}
+	}
+
+}
+
+.filter-reset-link{
+	color: #5db2fc;
+	margin: 10px 0;
+	display: block;
+
+}
+
+.filter-price {
+
+	& label:last-of-type {
+		margin-left: 45px;
+	}
+	&__input{
+		margin-left: 10px;
+		display: inline-block;
+	  	border: 1px solid rgb(235, 237, 239);
+	  	@include border-radius(3px, 3px);
+	  	@include box-shadow(rgb(255, 255, 255) 0px 1px 1px 0px, rgba(148, 148, 148, 0.43) inset);
+	  	width: 79px;
+	  	height: 26px;
+	  	@include box-sizing(border-box);
+	  	padding: 5px 10px;
+	  	&:focus {
+	  		outline: none;
+	  	}
+	}
+
+}
+
+.filter-colors {
+	width: 230px;
+	text-align: justify;
+	margin-left: -20px;
+	&__block {
+		 @include box-sizing(border-box);
+		display: inline-block;
+		margin-left: 20px;
+		margin-bottom: 15px;
+		width: 35px;
+		height: 35px;
+		border: 1px solid #dee1e4;
+		&_active{
+			border: 2px solid #ff6600;
+		}
+	}
+}
+
+
+/**** CЛАЙДЕР jQueryUI - налаштування**/
+
+.filter-price .ui-slider {
+	margin: 20px 0 30px;
+	background: #dee1e4;	// фон полоски
+
+}
+.filter-price .ui-slider .ui-slider-handle {
+	background: url('../img/sprite-s7e184e221b.png') 0 -226px no-repeat; // повзунок
+  width: 8px;
+  height: 14px;
+
+  &:focus {
+  	outline: none;
+  }
+}
+.filter-price .ui-slider .ui-slider-range {		// зона вибраних цін
+	background: #ff6600;
+}
+
+.filter-price .ui-slider-horizontal {
+	height: 3px;   // ширина полоски
+}
+.filter-price .ui-slider-horizontal .ui-slider-handle {
+	top: 0;						// положення повзунка
+    margin-left: -4px;
+}
+
+
