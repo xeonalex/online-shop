@@ -168,7 +168,6 @@ jQuery("input#maxCost").change(function(){
 							 productWrap.addClass(modes.tile[0]);
 							 break;
 			}
-			console.log(modes.line[0]);
 		})
 
 			// ВЫЗОВ модулей

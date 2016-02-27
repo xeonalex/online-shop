@@ -3,7 +3,7 @@ $category-menu-link-active: #d9e5ea;
 
 .aside {
 	float: left;
-	width: 333px;
+	width: 331px;
 }
 .category-menu {
 	list-style: none;
@@ -29,7 +29,7 @@ $category-menu-link-active: #d9e5ea;
 		text-decoration: none;
 		display: block;
 		background:$category-menu-link;
-		padding: 15px 28px;
+		padding: 13px 28px;
 		&:hover {
 			background: $category-menu-link-active;
 		}
@@ -50,7 +50,7 @@ $category-menu-link-active: #d9e5ea;
 	margin: 0;
 	&__li{
 		background:$category-menu-link;
-		padding: 0 30px;
+		padding: 0 27px;
 		border: 1px solid #dee1e4;
 		border-top: 0;
 		overflow: hidden;
@@ -67,13 +67,14 @@ $category-menu-link-active: #d9e5ea;
 		font-size: 1em;
 		position: relative;
 		margin: 0;
-		padding: 16px 0;
+		margin: 11px 0 11px;
 		&:hover:after {
 			content: '';
 			display: inline-block;
 			position: absolute;
+			top: 2px;
 			right: -5px;
-			vertical-align: middle;
+			vertical-align: bottom;
 			background: url('../img/sprite-s7e184e221b.png') 0 -245px no-repeat;
   			width: 18px;
   			height: 11px;
@@ -89,6 +90,7 @@ $category-menu-link-active: #d9e5ea;
 			content: '';
 			display: inline-block;
 			position: absolute;
+			top: 2px;
 			right: -5px;
 			vertical-align: middle;
 			background: url('../img/sprite-s7e184e221b.png') 0 -261px no-repeat;
@@ -100,7 +102,7 @@ $category-menu-link-active: #d9e5ea;
 		}
 	}
 	.accordeon__content {
-		margin-bottom: 16px;
+		margin-bottom: 18px;
 	}
 }
 
@@ -117,10 +119,10 @@ $category-menu-link-active: #d9e5ea;
 		}
 	}
 	.filter-availability__label {
-		margin-top: 7px;
+		margin-top: 17px;
 		display: block;
 		&:first-of-type {
-			margin-top: -7px;
+			margin-top: 3px;
 		}
 		&:before {
 			display: inline-block;
@@ -153,11 +155,11 @@ $category-menu-link-active: #d9e5ea;
 		}
 	}
 	.filter-brands__label {
-		margin-top: 7px;
+		margin-top: 16px;
 		display: block;
-		&:first-of-type {
-			margin-top: -7px;
-		}
+		// &:first-of-type {
+		// 	margin-top: -7px;
+		// }
 		&:before {
 			display: inline-block;
 			vertical-align: middle;
@@ -190,7 +192,7 @@ $category-menu-link-active: #d9e5ea;
 		}
 	}
 	.filter-os__label {
-		margin-top: 7px;
+		margin-top: 16px;
 		display: block;
 		&:before {
 			display: inline-block;
@@ -229,23 +231,24 @@ $category-menu-link-active: #d9e5ea;
 
 .filter-reset-link{
 	color: #5db2fc;
-	margin: 10px 0;
+	margin: 13px 0 10px;
 	display: block;
 
 }
 
 .filter-price {
+	margin: 17px 0 18px;
 
 	& label:last-of-type {
 		margin-left: 45px;
 	}
 	&__input{
-		margin-left: 10px;
+		margin-left: 11px;
 		display: inline-block;
 	  	border: 1px solid rgb(235, 237, 239);
 	  	@include border-radius(3px, 3px);
 	  	@include box-shadow(rgb(255, 255, 255) 0px 1px 1px 0px, rgba(148, 148, 148, 0.43) inset);
-	  	width: 79px;
+	  	width: 82px;
 	  	height: 26px;
 	  	@include box-sizing(border-box);
 	  	padding: 5px 10px;
@@ -257,7 +260,7 @@ $category-menu-link-active: #d9e5ea;
 }
 
 .filter-colors {
-	width: 230px;
+	width: 240px;
 	text-align: justify;
 	margin-left: -20px;
 	&__block {
@@ -265,8 +268,8 @@ $category-menu-link-active: #d9e5ea;
 		display: inline-block;
 		margin-left: 20px;
 		margin-bottom: 15px;
-		width: 35px;
-		height: 35px;
+		width: 38px;
+		height: 38px;
 		border: 1px solid #dee1e4;
 		&_active{
 			border: 2px solid #ff6600;
