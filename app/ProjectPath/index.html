@@ -11,6 +11,7 @@
 		<link rel="stylesheet" type="text/css" href="../css/fonts.css">
 		<link rel="stylesheet" type="text/css" href="../css/normalize.css">
 		<link rel="stylesheet" type="text/css" href="../css/jquery-ui-slider.css">
+		<link rel="stylesheet" type="text/css" href="../css/select2.min.css">
 		<link rel="stylesheet" type="text/css" href="../css/main.css">
 	</head>
 	<body>
@@ -87,7 +88,7 @@
 							</div>
 						</li>
 						<li class="accordeon__li">
-							<p class="accordeon__toggle accordeon_active">Бренды</p>
+							<p class="accordeon__toggle">Бренды</p>
 							<div class="accordeon__content filter-brands">
 								<input type="checkbox" id="brand0" class="filter-brands__input">
 								<label for="brand0" class="filter-brands__label">Lenovo</label>
@@ -102,7 +103,7 @@
 							</div>
 						</li>
 						<li class="accordeon__li">
-							<p class="accordeon__toggle accordeon_active">Цена</p>
+							<p class="accordeon__toggle">Цена</p>
 							<div class="accordeon__content filter-price">
 								<label class="filter-price__label">от
 									<input type="text" id="minCost" value="0" class="filter-price__input">
@@ -114,12 +115,12 @@
 							</div>
 						</li>
 						<li class="accordeon__li">
-							<p class="accordeon__toggle accordeon_active">Цвет</p>
+							<p class="accordeon__toggle">Цвет</p>
 							<div class="accordeon__content filter-colors"><a href="#" style="background: #ffffff" class="filter-colors__block"></a><a href="#" style="background: #cccccc" class="filter-colors__block"></a><a href="#" style="background: #000000" class="filter-colors__block"></a><a href="#" style="background: #0a3153" class="filter-colors__block"></a><a href="#" style="background: #ff1800" class="filter-colors__block"></a><a href="#" style="background: #fff343" class="filter-colors__block"></a><a href="#" style="background: #fb914a" class="filter-colors__block"></a><a href="#" style="background: #92c37c" class="filter-colors__block"></a><a href="#" style="background: #40a6ff" class="filter-colors__block"></a><a href="#" style="background: #92c37c" class="filter-colors__block"></a><a href="#" style="background: #40a6ff" class="filter-colors__block"></a><a href="#" style="background: #cccccc" class="filter-colors__block"></a>
 							</div>
 						</li>
 						<li class="accordeon__li">
-							<p class="accordeon__toggle accordeon_active">Операционные системы</p>
+							<p class="accordeon__toggle">Операционные системы</p>
 							<div class="accordeon__content filter-os">
 								<input type="checkbox" id="operationSys0" class="filter-os__input">
 								<label for="operationSys0" class="filter-os__label">Android</label>
@@ -136,18 +137,217 @@
 					</ul>
 				</aside>
 				<main class="content">
-					<div class="content__switchers">sdfsdfs</div>
-				</main>
-				<div class="site-info">
-					<div class="site-info__header">Важная информация</div>
-					<div class="site-info__text">
-						<p class="dontsplit">Повседневная практика показывает, что сложившаяся структура организации влечет за собой процесс внедрения и модернизации позиций, занимаемых участниками в отношении поставленных задач. Значимость этих проблем настолько очевидна, что реализация намеченных плановых заданий в значительной степени обуславливает создание модели развития. Таким образом консультация с широким активом представляет собой интересный эксперимент проверки модели развития.</p>
-						<p class="dontsplit">Идейные соображения высшего порядка, а также рамки и место обучения кадров позволяет оценить значение позиций, занимаемых участниками в отношении поставленных задач. Таким образом сложившаяся структура организации требуют определения и уточнения направлений прогрессивного развития. Равным образом консультация с широким активом влечет за собой процесс внедрения и модернизации соответствующий условий активизации.</p>
-						<p class="dontsplit">Идейные соображения высшего порядка, а также начало повседневной работы по формированию позиции позволяет оценить значение соответствующий условий активизации. С другой стороны сложившаяся структура организации позволяет оценить значение системы обучения кадров, соответствует насущным потребностям.</p>
-						<p class="dontsplit">Повседневная практика показывает, что сложившаяся структура организации влечет за собой процесс внедрения и модернизации позиций, занимаемых участниками в отношении поставленных задач. Значимость этих проблем настолько очевидна, что реализация намеченных плановых заданий в значительной степени обуславливает создание модели развития. Таким образом консультация с широким активом представляет собой интересный эксперимент проверки модели развития.</p>
-						<p class="dontsplit">Идейные соображения высшего порядка, а также рамки и место обучения кадров позволяет оценить значение позиций, занимаемых участниками в отношении поставленных задач. Таким образом сложившаяся структура организации требуют определения и уточнения направлений прогрессивного развития. Равным образом консультация с широким активом влечет за собой процесс внедрения и модернизации соответствующий условий активизации.</p>
-						<p class="dontsplit">Идейные соображения высшего порядка, а также начало повседневной работы по формированию позиции позволяет оценить значение соответствующий условий активизации. С другой стороны сложившаяся структура организации позволяет оценить значение системы обучения кадров, соответствует насущным потребностям.</p>
+					<div class="content__switchers">
+						<div class="content__sorter"><span class="sorter__label-for-select">Сортировать по</span>
+							<select class="sorter__select">
+								<option>по цене</option>
+								<option>по рейтингу</option>
+							</select>
+						</div>
+						<ul class="content__view-mode-list"><span class="view-mode-list__text">Вид каталога</span>
+							<li class="view-mode-list__li view-mode-list__li_active"><a href="#" alt="line" data-mode="line" class="view-mode-list_line"></a></li>
+							<li class="view-mode-list__li view-mode-list__li_active"><a href="#" alt="table" data-mode="table" class="view-mode-list_table"></a></li>
+							<li class="view-mode-list__li view-mode-list__li_active"><a href="#" alt="tile" data-mode="tile" class="view-mode-list_tile"></a></li>
+						</ul>
 					</div>
+					<ul class="content__product-list product-list_tile">
+						<li class="content__product-wrap product-wrap_tile">
+							<div class="product-wrap__preview">
+								<div class="product-wrap__wrap-big-image"><img src="../img/phone-1.png" class="product-wrap__big-image"></div>
+								<ul class="product-wrap__preview-list">
+									<li class="product-wrap__preview-li"><img src="../img/phone-1.png" class="product-wrap__preview-img"></li>
+									<li class="product-wrap__preview-li"><img src="../img/phone-2.png" class="product-wrap__preview-img"></li>
+									<li class="product-wrap__preview-li"><img src="../img/phone-3.png" class="product-wrap__preview-img"></li>
+								</ul>
+								<div class="product-wrap__vendor-code"><span class="vendor-code-title">Артикул</span> 189238</div>
+							</div>
+							<div class="product-wrap__content-wrap">
+								<h3 class="product-wrap__title">Samsung GT-I9301I GALAXY S 3</h3>
+								<ul class="product-wrap__product-options-list">
+									<li class="product-wrap__product-options-li"><span class="product-options-title">Тип SIM-карты</span><span class="product-options-value">Micro-SIM</span></li>
+									<li class="product-wrap__product-options-li"><span class="product-options-title">Количество SIM-карт</span><span class="product-options-value">1</span></li>
+									<li class="product-wrap__product-options-li"><span class="product-options-title">Цвет</span><span class="product-options-value">Белый</span></li>
+									<li class="product-wrap__product-options-li"><span class="product-options-title">ОC</span><span class="product-options-value">Android</span></li>
+									<li class="product-wrap__product-options-li"><span class="product-options-title">Связь 3G</span><span class="product-options-value">Есть</span></li>
+								</ul>
+								<div class="product-wrap__content">Samsung GT-I9301I GALAXY S 3 Смартфон Samsung GT-I9301I GALAXY S 3 Ceramic White Моноблок, Micro-SIM, Android 4.4, 3G, Bluetooth 4.0, EDGE, GPRS, WAP, Wi-Fi, Количество ядер процессора 4, Частота процессора 1400 МГц...</div>
+								<div class="product-wrap__rating-block">
+									<ul class="product-wrap__rating-list">
+										<li class="product-wrap__rating_active"></li>
+										<li class="product-wrap__rating_active"></li>
+										<li class="product-wrap__rating_active"></li>
+										<li class="product-wrap__rating_active"></li>
+										<li class="product-wrap__rating"></li><span class="product-wrap__rating-number">4</span>
+									</ul>
+								</div>
+							</div>
+							<div class="product-wrap__info-block">
+								<div class="product-wrap__product-price">8 990</div><a class="product-wrap__add-to-basket">В корзину</a>
+								<div class="product-wrap__product-availability_available">В наличии</div>
+							</div>
+						</li>
+						<li class="content__product-wrap product-wrap_tile">
+							<div class="product-wrap__preview">
+								<div class="product-wrap__wrap-big-image"><img src="../img/phone-1.png" class="product-wrap__big-image"></div>
+								<ul class="product-wrap__preview-list">
+									<li class="product-wrap__preview-li"><img src="../img/phone-1.png" class="product-wrap__preview-img"></li>
+									<li class="product-wrap__preview-li"><img src="../img/phone-2.png" class="product-wrap__preview-img"></li>
+									<li class="product-wrap__preview-li"><img src="../img/phone-3.png" class="product-wrap__preview-img"></li>
+								</ul>
+								<div class="product-wrap__vendor-code"><span class="vendor-code-title">Артикул</span> 189238</div>
+							</div>
+							<div class="product-wrap__content-wrap">
+								<h3 class="product-wrap__title">Samsung GT-I9301I GALAXY S 3</h3>
+								<ul class="product-wrap__product-options-list">
+									<li class="product-wrap__product-options-li"><span class="product-options-title">Тип SIM-карты</span><span class="product-options-value">Micro-SIM</span></li>
+									<li class="product-wrap__product-options-li"><span class="product-options-title">Количество SIM-карт</span><span class="product-options-value">1</span></li>
+									<li class="product-wrap__product-options-li"><span class="product-options-title">Цвет</span><span class="product-options-value">Белый</span></li>
+									<li class="product-wrap__product-options-li"><span class="product-options-title">ОC</span><span class="product-options-value">Android</span></li>
+									<li class="product-wrap__product-options-li"><span class="product-options-title">Связь 3G</span><span class="product-options-value">Есть</span></li>
+								</ul>
+								<div class="product-wrap__content">Samsung GT-I9301I GALAXY S 3 Смартфон Samsung GT-I9301I GALAXY S 3 Ceramic White Моноблок, Micro-SIM, Android 4.4, 3G, Bluetooth 4.0, EDGE, GPRS, WAP, Wi-Fi, Количество ядер процессора 4, Частота процессора 1400 МГц...</div>
+								<div class="product-wrap__rating-block">
+									<ul class="product-wrap__rating-list">
+										<li class="product-wrap__rating_active"></li>
+										<li class="product-wrap__rating_active"></li>
+										<li class="product-wrap__rating_active"></li>
+										<li class="product-wrap__rating_active"></li>
+										<li class="product-wrap__rating"></li><span class="product-wrap__rating-number">4</span>
+									</ul>
+								</div>
+							</div>
+							<div class="product-wrap__info-block">
+								<div class="product-wrap__product-price">8 990</div><a class="product-wrap__add-to-basket">В корзину</a>
+								<div class="product-wrap__product-availability_available">В наличии</div>
+							</div>
+						</li>
+						<li class="content__product-wrap product-wrap_tile">
+							<div class="product-wrap__preview">
+								<div class="product-wrap__wrap-big-image"><img src="../img/phone-1.png" class="product-wrap__big-image"></div>
+								<ul class="product-wrap__preview-list">
+									<li class="product-wrap__preview-li"><img src="../img/phone-1.png" class="product-wrap__preview-img"></li>
+									<li class="product-wrap__preview-li"><img src="../img/phone-2.png" class="product-wrap__preview-img"></li>
+									<li class="product-wrap__preview-li"><img src="../img/phone-3.png" class="product-wrap__preview-img"></li>
+								</ul>
+								<div class="product-wrap__vendor-code"><span class="vendor-code-title">Артикул</span> 189238</div>
+							</div>
+							<div class="product-wrap__content-wrap">
+								<h3 class="product-wrap__title">Samsung GT-I9301I GALAXY S 3</h3>
+								<ul class="product-wrap__product-options-list">
+									<li class="product-wrap__product-options-li"><span class="product-options-title">Тип SIM-карты</span><span class="product-options-value">Micro-SIM</span></li>
+									<li class="product-wrap__product-options-li"><span class="product-options-title">Количество SIM-карт</span><span class="product-options-value">1</span></li>
+									<li class="product-wrap__product-options-li"><span class="product-options-title">Цвет</span><span class="product-options-value">Белый</span></li>
+									<li class="product-wrap__product-options-li"><span class="product-options-title">ОC</span><span class="product-options-value">Android</span></li>
+									<li class="product-wrap__product-options-li"><span class="product-options-title">Связь 3G</span><span class="product-options-value">Есть</span></li>
+								</ul>
+								<div class="product-wrap__content">Samsung GT-I9301I GALAXY S 3 Смартфон Samsung GT-I9301I GALAXY S 3 Ceramic White Моноблок, Micro-SIM, Android 4.4, 3G, Bluetooth 4.0, EDGE, GPRS, WAP, Wi-Fi, Количество ядер процессора 4, Частота процессора 1400 МГц...</div>
+								<div class="product-wrap__rating-block">
+									<ul class="product-wrap__rating-list">
+										<li class="product-wrap__rating_active"></li>
+										<li class="product-wrap__rating_active"></li>
+										<li class="product-wrap__rating_active"></li>
+										<li class="product-wrap__rating_active"></li>
+										<li class="product-wrap__rating"></li><span class="product-wrap__rating-number">4</span>
+									</ul>
+								</div>
+							</div>
+							<div class="product-wrap__info-block">
+								<div class="product-wrap__product-price">8 990</div><a class="product-wrap__add-to-basket">В корзину</a>
+								<div class="product-wrap__product-availability_available">В наличии</div>
+							</div>
+						</li>
+						<li class="content__product-wrap product-wrap_tile">
+							<div class="product-wrap__preview">
+								<div class="product-wrap__wrap-big-image"><img src="../img/phone-1.png" class="product-wrap__big-image"></div>
+								<ul class="product-wrap__preview-list">
+									<li class="product-wrap__preview-li"><img src="../img/phone-1.png" class="product-wrap__preview-img"></li>
+									<li class="product-wrap__preview-li"><img src="../img/phone-2.png" class="product-wrap__preview-img"></li>
+									<li class="product-wrap__preview-li"><img src="../img/phone-3.png" class="product-wrap__preview-img"></li>
+								</ul>
+								<div class="product-wrap__vendor-code"><span class="vendor-code-title">Артикул</span> 189238</div>
+							</div>
+							<div class="product-wrap__content-wrap">
+								<h3 class="product-wrap__title">Samsung GT-I9301I GALAXY S 3</h3>
+								<ul class="product-wrap__product-options-list">
+									<li class="product-wrap__product-options-li"><span class="product-options-title">Тип SIM-карты</span><span class="product-options-value">Micro-SIM</span></li>
+									<li class="product-wrap__product-options-li"><span class="product-options-title">Количество SIM-карт</span><span class="product-options-value">1</span></li>
+									<li class="product-wrap__product-options-li"><span class="product-options-title">Цвет</span><span class="product-options-value">Белый</span></li>
+									<li class="product-wrap__product-options-li"><span class="product-options-title">ОC</span><span class="product-options-value">Android</span></li>
+									<li class="product-wrap__product-options-li"><span class="product-options-title">Связь 3G</span><span class="product-options-value">Есть</span></li>
+								</ul>
+								<div class="product-wrap__content">Samsung GT-I9301I GALAXY S 3 Смартфон Samsung GT-I9301I GALAXY S 3 Ceramic White Моноблок, Micro-SIM, Android 4.4, 3G, Bluetooth 4.0, EDGE, GPRS, WAP, Wi-Fi, Количество ядер процессора 4, Частота процессора 1400 МГц...</div>
+								<div class="product-wrap__rating-block">
+									<ul class="product-wrap__rating-list">
+										<li class="product-wrap__rating_active"></li>
+										<li class="product-wrap__rating_active"></li>
+										<li class="product-wrap__rating_active"></li>
+										<li class="product-wrap__rating_active"></li>
+										<li class="product-wrap__rating"></li><span class="product-wrap__rating-number">4</span>
+									</ul>
+								</div>
+							</div>
+							<div class="product-wrap__info-block">
+								<div class="product-wrap__product-price">8 990</div><a class="product-wrap__add-to-basket">В корзину</a>
+								<div class="product-wrap__product-availability_available">В наличии</div>
+							</div>
+						</li>
+						<li class="content__product-wrap product-wrap_tile">
+							<div class="product-wrap__preview">
+								<div class="product-wrap__wrap-big-image"><img src="../img/phone-1.png" class="product-wrap__big-image"></div>
+								<ul class="product-wrap__preview-list">
+									<li class="product-wrap__preview-li"><img src="../img/phone-1.png" class="product-wrap__preview-img"></li>
+									<li class="product-wrap__preview-li"><img src="../img/phone-2.png" class="product-wrap__preview-img"></li>
+									<li class="product-wrap__preview-li"><img src="../img/phone-3.png" class="product-wrap__preview-img"></li>
+								</ul>
+								<div class="product-wrap__vendor-code"><span class="vendor-code-title">Артикул</span> 189238</div>
+							</div>
+							<div class="product-wrap__content-wrap">
+								<h3 class="product-wrap__title">Samsung GT-I9301I GALAXY S 3</h3>
+								<ul class="product-wrap__product-options-list">
+									<li class="product-wrap__product-options-li"><span class="product-options-title">Тип SIM-карты</span><span class="product-options-value">Micro-SIM</span></li>
+									<li class="product-wrap__product-options-li"><span class="product-options-title">Количество SIM-карт</span><span class="product-options-value">1</span></li>
+									<li class="product-wrap__product-options-li"><span class="product-options-title">Цвет</span><span class="product-options-value">Белый</span></li>
+									<li class="product-wrap__product-options-li"><span class="product-options-title">ОC</span><span class="product-options-value">Android</span></li>
+									<li class="product-wrap__product-options-li"><span class="product-options-title">Связь 3G</span><span class="product-options-value">Есть</span></li>
+								</ul>
+								<div class="product-wrap__content">Samsung GT-I9301I GALAXY S 3 Смартфон Samsung GT-I9301I GALAXY S 3 Ceramic White Моноблок, Micro-SIM, Android 4.4, 3G, Bluetooth 4.0, EDGE, GPRS, WAP, Wi-Fi, Количество ядер процессора 4, Частота процессора 1400 МГц...</div>
+								<div class="product-wrap__rating-block">
+									<ul class="product-wrap__rating-list">
+										<li class="product-wrap__rating_active"></li>
+										<li class="product-wrap__rating_active"></li>
+										<li class="product-wrap__rating_active"></li>
+										<li class="product-wrap__rating_active"></li>
+										<li class="product-wrap__rating"></li><span class="product-wrap__rating-number">4</span>
+									</ul>
+								</div>
+							</div>
+							<div class="product-wrap__info-block">
+								<div class="product-wrap__product-price">8 990</div><a class="product-wrap__add-to-basket">В корзину</a>
+								<div class="product-wrap__product-availability_available">В наличии</div>
+							</div>
+						</li>
+					</ul>
+					<ul class="content__page-list">
+						<li class="content__page-list__li"><a href="#" class="content__page-list__link"><</a></li>
+						<li class="content__page-list__li"><a href="#" class="content__page-list__link list__link_active">1</a></li>
+						<li class="content__page-list__li"><a href="#" class="content__page-list__link">2</a></li>
+						<li class="content__page-list__li"><a href="#" class="content__page-list__link">3</a></li>
+						<li class="content__page-list__li"><a href="#" class="content__page-list__link">4</a></li>
+						<li class="content__page-list__li"><a href="#" class="content__page-list__link">></a></li>
+					</ul>
+				</main>
+			</div>
+		</div>
+		<div class="site-info">
+			<div class="site-info__wrap">
+				<div class="site-info__header">Важная информация</div>
+				<div class="site-info__text">
+					<p class="dontsplit">Повседневная практика показывает, что сложившаяся структура организации влечет за собой процесс внедрения и модернизации позиций, занимаемых участниками в отношении поставленных задач. Значимость этих проблем настолько очевидна, что реализация намеченных плановых заданий в значительной степени обуславливает создание модели развития. Таким образом консультация с широким активом представляет собой интересный эксперимент проверки модели развития.</p>
+					<p class="dontsplit">Идейные соображения высшего порядка, а также рамки и место обучения кадров позволяет оценить значение позиций, занимаемых участниками в отношении поставленных задач. Таким образом сложившаяся структура организации требуют определения и уточнения направлений прогрессивного развития. Равным образом консультация с широким активом влечет за собой процесс внедрения и модернизации соответствующий условий активизации.</p>
+					<p class="dontsplit">Идейные соображения высшего порядка, а также начало повседневной работы по формированию позиции позволяет оценить значение соответствующий условий активизации. С другой стороны сложившаяся структура организации позволяет оценить значение системы обучения кадров, соответствует насущным потребностям.</p>
+					<p class="dontsplit">Повседневная практика показывает, что сложившаяся структура организации влечет за собой процесс внедрения и модернизации позиций, занимаемых участниками в отношении поставленных задач. Значимость этих проблем настолько очевидна, что реализация намеченных плановых заданий в значительной степени обуславливает создание модели развития. Таким образом консультация с широким активом представляет собой интересный эксперимент проверки модели развития.</p>
+					<p class="dontsplit">Идейные соображения высшего порядка, а также рамки и место обучения кадров позволяет оценить значение позиций, занимаемых участниками в отношении поставленных задач. Таким образом сложившаяся структура организации требуют определения и уточнения направлений прогрессивного развития. Равным образом консультация с широким активом влечет за собой процесс внедрения и модернизации соответствующий условий активизации.</p>
+					<p class="dontsplit">Идейные соображения высшего порядка, а также начало повседневной работы по формированию позиции позволяет оценить значение соответствующий условий активизации. С другой стороны сложившаяся структура организации позволяет оценить значение системы обучения кадров, соответствует насущным потребностям.</p>
 				</div>
 			</div>
 		</div>
@@ -181,6 +381,7 @@
 		<!--endbower-->
 		<script src="../js/jquery-columnizer.min.js"></script>
 		<script src="../js/jquery-ui.min.js"></script>
+		<script src="../js/select2.min.js"></script>
 		<script src="../js/main.js"></script>
 	</body>
 </html>

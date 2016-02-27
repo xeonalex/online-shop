@@ -8,7 +8,7 @@ aside.aside
 	ul.aside__goods-param.accordeon
 		each text,index in accordeon
 			li.accordeon__li
-				p.accordeon__toggle(class="accordeon_active") #{text}
+				p.accordeon__toggle(class="#{index==0?'accordeon_active' : ''}") #{text}
 
 				case index
 					when 0: .accordeon__content.filter-availability

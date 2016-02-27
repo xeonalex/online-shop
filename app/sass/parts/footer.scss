@@ -1,20 +1,26 @@
 // Site-info
 .site-info {
 	@include clearfix;
-
-	&__header {
-		font-family: 'open_sansbold';
-		font-size:1.25em;
-	}
-	&__text {
-		font-size: 0.875em;
-		.column {
-			width: 540px !important;
-			text-align: justify;
+	background: $main_color_1;
+	overflow: hidden;
+	&__wrap {
+		padding: 15px 0;
+		width: $main_width;
+		margin: 0 auto;
+		.site-info__header {
+			font-family: 'open_sansbold';
+			font-size:1.25em;
 		}
+		.site-info__text {
+			font-size: 0.875em;
+			.column {
+				width: 540px !important;
+				text-align: justify;
+			}
 
-		.last {
-			float:right !important;
+			.last {
+				float:right !important;
+			}
 		}
 	}
 }

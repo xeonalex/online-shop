@@ -26,3 +26,11 @@
 		clear: both;
 	}
 }
+@mixin pre_clearfix {
+	&:before {
+		content: "";
+		display: block;
+		height: 0;
+		clear: both;
+	}
+}

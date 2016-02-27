@@ -1,2 +1,57 @@
 main.content
-	.content__switchers sdfsdfs
+	.content__switchers
+		.content__sorter
+			span.sorter__label-for-select Сортировать по
+			- var selectors=['по цене','по рейтингу'];
+			select.sorter__select
+				each text in selectors
+					option #{text}
+		ul.content__view-mode-list
+			-var modes=['line','table','tile']
+			span.view-mode-list__text Вид каталога
+			each text in modes
+				li.view-mode-list__li.view-mode-list__li_active
+					a(href='#' class='view-mode-list_#{text}' alt='#{text}' data-mode='#{text}')
+	ul.content__product-list.product-list_tile
+		- for (var k = 0; k < 5; k++)
+
+			li.content__product-wrap.product-wrap_tile
+				.product-wrap__preview
+					.product-wrap__wrap-big-image
+						img(src='../img/phone-1.png' class='product-wrap__big-image')
+					ul.product-wrap__preview-list
+						- for (var x = 1; x <= 3; x++)
+							li.product-wrap__preview-li
+								img.product-wrap__preview-img(src='../img/phone-#{x}.png')
+					.product-wrap__vendor-code
+						span.vendor-code-title Артикул
+						|  189238
+				.product-wrap__content-wrap
+					h3.product-wrap__title Samsung GT-I9301I GALAXY S 3
+					ul.product-wrap__product-options-list
+						- var options_title=['Тип SIM-карты','Количество SIM-карт','Цвет','ОC','Связь 3G','4G (LTE)','GPS-модуль'];
+						- var options_value=['Micro-SIM','1','Белый','Android','Есть','Нет','Есть'];
+						- for (var x = 0; x < 5; x++)
+							li.product-wrap__product-options-li
+								span.product-options-title #{options_title[x]}
+								span.product-options-value #{options_value[x]}
+					.product-wrap__content Samsung GT-I9301I GALAXY S 3 Смартфон Samsung GT-I9301I GALAXY S 3 Ceramic White Моноблок, Micro-SIM, Android 4.4, 3G, Bluetooth 4.0, EDGE, GPRS, WAP, Wi-Fi, Количество ядер процессора 4, Частота процессора 1400 МГц...
+					.product-wrap__rating-block
+						ul.product-wrap__rating-list
+							- for (var x = 1; x <= 5; x++)
+								li(class="product-wrap__rating#{x<=4? '_active' : ''}")
+							span.product-wrap__rating-number 4
+				.product-wrap__info-block
+					.product-wrap__product-price 8 990
+					a.product-wrap__add-to-basket В корзину
+					.product-wrap__product-availability_available В наличии
+	ul.content__page-list
+		li.content__page-list__li
+			a.content__page-list__link(href='#') <
+		- for (var x=1; x<=4;x++)
+			li.content__page-list__li
+				a.content__page-list__link(href='#' class="#{x==1? 'list__link_active':''}") #{x}
+		li.content__page-list__li
+			a.content__page-list__link(href='#') >
+
+

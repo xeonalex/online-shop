@@ -1,6 +1,5 @@
 'use strict';
 $(document).ready(function(){
-	$('.site-info__text').columnize({columns: 2 });
 
 	$('.accordeon__toggle').on('click',function(e){
 		var $this=$(this),
@@ -12,7 +11,7 @@ $(document).ready(function(){
 
 		if(!$this.hasClass('accordeon_active')) {
 			toggles.removeClass('accordeon_active');
-			content.slideUp('fast');
+			content.slideUp('slow');
 			$this.addClass('accordeon_active');
 			currentContent.stop(true,true).slideDown('slow');
 		} else {
@@ -47,8 +46,7 @@ $(document).ready(function(){
 	})();
 
 
-	// ВЫЗОВ
-	ResetLinkModule.reset($('.filter-reset-link'));
+
 
 
 /* слайдер цен */
@@ -123,4 +121,61 @@ jQuery("input#maxCost").change(function(){
 			ColorsBlocks.removeClass('filter-colors__block_active');
 			$(this).addClass('filter-colors__block_active');
 	})
+
+
+
+		/*** СЛАЙДЕР фото **/
+		$('.product-wrap__preview-list').find('.product-wrap__preview-li').on('click',function(){
+			var currentSlider=$(this),
+			 	sliderList=currentSlider.parent('.product-wrap__preview-list'),
+			 	sliderBlock=currentSlider.closest('.product-wrap__preview'),
+			  	link = currentSlider.find('img').attr('src'),
+			  	big_image=sliderBlock.find(".product-wrap__big-image"),
+			  	big_image_link=big_image.attr('src');
+
+			  	sliderList.find('.product-wrap__preview-li_active').removeClass('product-wrap__preview-li_active');
+			  	currentSlider.addClass('product-wrap__preview-li_active');
+			  	big_image.stop(true,true).fadeOut('100',function(){
+				  	$(this).attr("src",link);
+				  	big_image.stop(true,true).fadeIn('100');
+				});
+		})
+
+		$('.content__view-mode-list').find('[data-mode]').on('click',function(event){
+			event.preventDefault ? event.preventDefault() : (event.returnValue=false);
+			var currentModeLink=$(this),
+				currentMode=currentModeLink.attr('data-mode'),
+				productList=$('.content__product-list'),
+				productWrap=$('.content__product-wrap');
+
+
+			var modes = {
+				'line': ['product-wrap_line','product-list_line'],
+				'table':['product-wrap_table','product-list_table'],
+				'tile': ['product-wrap_tile','product-list_tile']
+			};
+				productList.attr('class','content__product-list');
+				productWrap.attr('class','content__product-wrap');
+
+			switch (currentMode){
+				case 'line': productList.addClass(modes.line[1]);
+							 productWrap.addClass(modes.line[0]);
+							 break;
+				 case 'table': productList.addClass(modes.table[1]);
+							 productWrap.addClass(modes.table[0]);
+							 break;
+				 case 'tile': productList.addClass(modes.tile[1]);
+							 productWrap.addClass(modes.tile[0]);
+							 break;
+			}
+			console.log(modes.line[0]);
+		})
+
+			// ВЫЗОВ модулей
+		ResetLinkModule.reset($('.filter-reset-link'));
+
+			// Активация необходимых возможностей: columnizer, select2
+		$('.site-info__text').columnize({columns: 2 });
+		$('.sorter__select').select2().css('width','143');
+		$('.select2-container').css('width','143');
 })
