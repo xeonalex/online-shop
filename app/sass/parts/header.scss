@@ -24,11 +24,13 @@
 }
 .socials-list {
 padding: 0;
-margin-left: -17px;
-word-spacing: -.36em;
+word-spacing: -4px;
 	&__li {
 		display:inline-block;
 	  margin-left: 17px;
+	    &:first-of-type {
+			margin-left: 0;
+		}
 	}
 	&__li_bigger {
 		margin-left: 28px;
@@ -48,24 +50,25 @@ float: right;
   margin-top: 25px;
 
 }
-.header__adress {
-	text-align: bottom;
-}
-
 .header__telephone {
 	margin-left: 82px;
-	font-size: 18px;
-	font-family: 'open_sanssemibold';
 }
 
 .adress__street{
 	font-size: 14px;
 	display: inline-block;
+	text-decoration: none;
 }
 .adress__street,
 .telephone__number {
-
+	text-decoration: none;
+	color: #333333;
 	margin: 0;
+}
+
+.telephone__number {
+	font-size: 18px;
+	font-family: 'open_sanssemibold';
 }
 
 .adress__street:before {
@@ -90,15 +93,9 @@ float: right;
 
 .header__logo-line-wrap {
 	height: 94px;
+	@include pseudo_vertical_align;
 }
-.header__logo-line-wrap:before {
-	display: inline-block;
-	vertical-align: middle;
-	content: '';
-	width: 1px;
-	height: 100%;
-	margin-left: -0.4em;
-}
+
 /** LOGO_LINE **/
 
 .header__logo,
@@ -125,17 +122,11 @@ float: right;
 }
 
 .logo__link {
-	font-family: 'open_sansextrabold';
-	font-size: 22px;
-	letter-spacing: 1px;
-	line-height: 1;
-	text-decoration: none;
-}
-.logo__text_orange {
-	margin: 0;
-	color: $orange;
-}
 
+}
+.logo__seo-text {
+	font-size: 0;
+}
 .search-form {
 
 	&__input{
@@ -165,16 +156,17 @@ float: right;
 }
 
 .user-menu {
-	min-width: 400px;
 	list-style: none;
 	display: inline-block;
-	margin-left: -25px;
 	font-family: 'open_sanssemibold';
 	padding: 0;
 	&__li {
 		display: inline-block;
 		margin-left: 25px;
 		font-size: 1em;
+		&:first-of-type {
+			margin-left: 0;
+		}
 	}
 	&__link {
 		color: black;

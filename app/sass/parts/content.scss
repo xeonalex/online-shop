@@ -42,6 +42,11 @@
 			outline: none;
 		}
 	}
+	.view-mode-list__text {
+			margin-right: 15px;
+			float: right;
+			@include vertical-align;
+		}
 	.content__view-mode-list {
 		list-style: none;
 		padding: 0;
@@ -52,32 +57,57 @@
 		.view-mode-list__li {
 			margin-left: -0.28em;
 			display: inline-block;
-			padding: 16px 16px;
+			width: 52px;
+			height: 52px;
 			border-left: 1px solid #dee1e4;
 			&:hover {
 				background: #e0e7ea;
 			}
+
 		}
-		.view-mode-list__text {
-			margin-right: 10px;
-		}
+
 		.view-mode-list_line {
-			display: inline-block;
-			 background: url('../img/sprite-s7e184e221b.png') 0 -277px no-repeat;
-			  width: 16px;
-			  height: 16px;
+			display: block;
+			width: 100%;
+			height: 100%;
+			text-align: center;
+			&:before {
+			 	content: '';
+			 	display: inline-block;
+			 	@include vertical-align();
+			 	background: url('../img/sprite-s7e184e221b.png') 0 -277px no-repeat;
+			  	width: 16px;
+			  	height: 16px;
+			  	margin: 0 auto;
+			}
 		}
 		.view-mode-list_table {
-			display: inline-block;
-			 background: url('../img/sprite-s7e184e221b.png') 0 -319px no-repeat;
-			  width: 16px;
-			  height: 16px;
+			display: block;
+			width: 100%;
+			height: 100%;
+			text-align: center;
+			&:before {
+			 	content: '';
+			 	display: inline-block;
+			 	@include vertical-align();
+			 	background: url('../img/sprite-s7e184e221b.png') 0 -319px no-repeat;
+			  	width: 16px;
+			  	height: 16px;
+			}
 		}
 		.view-mode-list_tile {
-			display: inline-block;
-			  background: url('../img/sprite-s7e184e221b.png') 0 -298px no-repeat;
-			  width: 16px;
-			  height: 16px;
+			display: block;
+			width: 100%;
+			height: 100%;
+			text-align: center;
+			&:before {
+			 	content: '';
+			 	display: inline-block;
+			 	@include vertical-align();
+				background: url('../img/sprite-s7e184e221b.png') 0 -298px no-repeat;
+			    width: 16px;
+			    height: 16px;
+			}
 		}
 	}
 }
@@ -107,6 +137,7 @@
 .content__product-wrap{
 	background: #fbfbfb;
 	border: 1px solid #dee1e4;
+	@include clearfix;
 }
 
 .product-wrap__product-price {
@@ -131,9 +162,8 @@
 	}
 	.product-options-title {
 		width: 48%;
-		white-space: nowrap;
-	float: left;
-	overflow: hidden;
+		float: left;
+
 	}
 	.product-options-value{
 		width: 50%;
@@ -359,12 +389,17 @@ margin-left: 13px;
 	.product-wrap__preview,
 	.product-wrap__content-wrap,
 	.product-wrap__title,
-	.product-wrap__info-block,
 	.product-wrap__product-price,
 	.product-wrap__add-to-basket,
 	.product-wrap__product-availability_available {
 		display: inline-block;
-		vertical-align: middle;
+		vertical-align: top;
+	}
+	.product-wrap__preview{
+		width: 110px;
+	}
+	.product-wrap__info-block{
+		vertical-align: bottom;
 	}
 	.product-wrap__content-wrap {
 		margin-top: 5px;
@@ -375,15 +410,17 @@ margin-left: 13px;
 		float: right;
 	}
 	.product-wrap__title {
-		width: 290px;
+		width: 280px;
 		font-size: 14px;
 		margin: 0;
+		margin-left: 5px;
 		font-family: 'open_sansregular';
 	}
     .product-wrap__product-price{
     	font-family: 'open_sansbold';
-    	width: 90px;
+    	width: 100px;
     	margin-top: 5px;
+    	margin-left: 5px;
     }
 
     .product-wrap__preview {
@@ -400,15 +437,8 @@ margin-left: 13px;
     }
 	.product-wrap__info-block {
 		@include clearfix;
-		float:right;
-		&:before {
-	    display: inline-block;
-	    vertical-align: middle;
-	    content: '';
-	    width: 1px;
-	    height: 100%;
+		display: inline-block;
 
-		}
 	}
 	.product-wrap__vendor-code {
 		text-align: left;
@@ -421,6 +451,7 @@ margin-left: 13px;
 	border-top: none;
 	padding: 20px;
 	position:relative;
+	min-height: 200px;
 
 	&:hover {
 		@include box-shadow(0px 1px 5.7px 0.3px rgba(118, 118, 118, 0.75));
@@ -435,13 +466,20 @@ margin-left: 13px;
 		@include border-top-radius(5px);
 	}
 
-	.product-wrap__preview,
-	.product-wrap__content-wrap,
+	.product-wrap__preview {
+		float: left;
+	}
+	.product-wrap__content-wrap{
+		float: left;
+	}
 	.product-wrap__info-block {
-		display: inline-block;
-		vertical-align: top;
+		float: right;
+	}
+	.product-wrap__product-price {
+		float: right;
 	}
 	.product-wrap__content-wrap {
+		float: left;
 		width: 390px;
 		margin-left: 20px;
 		padding-right: 15px;
@@ -457,8 +495,11 @@ margin-left: 13px;
 	.product-wrap__info-block{
 		width: 120px;
 		@include clearfix;
+		position: absolute;
+		bottom: 20px;
+		right: 20px;
 	}
-	.product-wrap__product-price,
+
 	.product-wrap__add-to-basket,
 	.product-wrap__product-availability_available {
 		float: right;

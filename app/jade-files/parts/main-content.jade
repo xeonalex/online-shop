@@ -8,10 +8,10 @@ main.content
 					option #{text}
 		ul.content__view-mode-list
 			-var modes=['tile','table','line'];
-			span.view-mode-list__text Вид каталога
 			each text in modes
 				li.view-mode-list__li.view-mode-list__li_active
 					a(href='#' class='view-mode-list_#{text}' alt='#{text}' data-mode='#{text}')
+		span.view-mode-list__text Вид каталога
 	ul.content__product-list.product-list_tile
 		- for (var k = 0; k < 5; k++)
 
@@ -41,8 +41,8 @@ main.content
 							- for (var x = 1; x <= 5; x++)
 								li(class="product-wrap__rating#{x<=4? '_active' : ''}")
 							span.product-wrap__rating-number 4
+				.product-wrap__product-price 8 990
 				.product-wrap__info-block
-					.product-wrap__product-price 8 990
 					a.product-wrap__add-to-basket В корзину
 					.product-wrap__product-availability_available В наличии
 	ul.content__page-list

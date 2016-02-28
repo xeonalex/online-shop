@@ -34,3 +34,14 @@
 		clear: both;
 	}
 }
+
+@mixin pseudo_vertical_align {
+	&:before {
+	display: inline-block;
+	vertical-align: middle;
+	content: '';
+	width: 1px;
+	height: 100%;
+	margin-left: -0.4em;
+	}
+}

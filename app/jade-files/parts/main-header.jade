@@ -11,14 +11,15 @@ header.header
 						a.socials-list__link(href='#' class="socials-list__link-#{socials_pref[i]}_black" alt="#{socials_text[i]}")
 							span.socials-list__seo-span #{socials_text[i]}
 			.header__telephone
-				p.telephone__number +7 (921) 123-12-21
+				a(href='tel://+7(921)123-12-21' target='_blank').telephone__number +7 (921) 123-12-21
 			.header__adress
-				p.adress__street ул. Маяковского 7, офис 17
+				a(href='https://goo.gl/maps/ggHPch3zzBq' target='_blank').adress__street ул. Маяковского 7, офис 17
 	.header__logoline
 		.header__logo-line-wrap
 			.header__logo.logo
 				a.logo__link(href='#')
-					h1.logo__text_orange COOLTECH
+					img.logo__img_orange(alt='COOLTECH' src='../img/logo_orange.png')
+					span.logo__seo-text COOLTECH
 			.header__search-menu-wrap
 				form.header__search-form.search-form
 					input.search-form__input(type='text' placeholder='Что будем искать?')
